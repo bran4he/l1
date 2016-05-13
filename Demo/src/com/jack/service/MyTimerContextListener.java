@@ -31,7 +31,7 @@ public class MyTimerContextListener implements ServletContextListener {
     	
     	String regEx = "(yuanyuan)+.*(still)+";	//(bran)+.*(still)+
     	//last | grep ppp  -> username * still在线
-    	TimerTask cmdTask = new CmdTask("last", regEx);
+    	TimerTask cmdTask = new CmdTask("last | grep ppp", regEx);
     	
     	this.timer.schedule(cmdTask, 60000L, PERIOD);
     	
