@@ -6,9 +6,9 @@ import javax.servlet.annotation.WebListener;
 
 import org.apache.log4j.Logger;
 
-import com.jack.task.FileMerge;
-import com.jack.task.FileWalk;
-import com.jack.task.JackAnalysis;
+import com.task.FileMerge;
+import com.task.FileWalk;
+import com.task.JackAnalysis;
 
 //又一个失败的例子，原因是没有搞清楚timertask的工作机制
 //@WebListener

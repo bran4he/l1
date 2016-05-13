@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 
 import org.apache.log4j.Logger;
 
-import com.jack.task.FileMerge;
-import com.jack.task.FileWalk;
-import com.jack.task.JackAnalysis;
+import com.task.FileMerge;
+import com.task.FileWalk;
+import com.task.JackAnalysis;
 
 /**
  * 失败的例子，这个任务timer存活在servlet的生命周期里，servlet销毁时timer就被销毁了，我们不能保证servlet一直存活。

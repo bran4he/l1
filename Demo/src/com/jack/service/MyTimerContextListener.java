@@ -9,15 +9,16 @@ import javax.servlet.annotation.WebListener;
 
 import org.apache.log4j.Logger;
 
-import com.jack.task.FileMerge;
-import com.jack.task.FileWalk;
-import com.jack.task.JackAnalysis;
+import com.task.CmdTask;
+import com.task.FileMerge;
+import com.task.FileWalk;
+import com.task.JackAnalysis;
 
 @WebListener
 public class MyTimerContextListener implements ServletContextListener {
 	
 	private static Logger logger = Logger.getLogger(MyTimerContextListener.class);
-	private static final long PERIOD = 6*60*60*1000;
+	private static final long PERIOD = 5*60*1000;
 	public static final String PROJECT_PATH = "projectPath";
 	
 	private Timer timer = new Timer();
@@ -27,6 +28,12 @@ public class MyTimerContextListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent evt)  { 
     	logger.info("TimerConetxtListener initialized...");
+    	
+    	String regEx = "(yuanyuan)+.*(still)+";	//(bran)+.*(still)+
+    	//last | grep ppp  -> username * still在线
+    	TimerTask cmdTask = new CmdTask("last", regEx);
+    	
+    	this.timer.schedule(cmdTask, 60000L, PERIOD);
     	
     	//设置系统属性给log4j使用，用于生成日志到web-inf目录
 //    	String log4jdir = evt.getServletContext().getRealPath("/");
