@@ -1,17 +1,11 @@
 package com.comm.mail;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Properties;
 
-import javax.mail.Flags.Flag;
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Store;
-import javax.mail.internet.MimeUtility;
-
-import com.sun.mail.imap.IMAPMessage; 
 
 /**
  * <b>使用IMAP协议接收邮件</b><br/>
