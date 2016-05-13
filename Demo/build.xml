@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  
+<!-- 定义一个工程，默认任务为build-war -->  
+<project name="create war file" default="build-war" basedir=".">  
+      
+    <!-- 定义属性，打成war包的名称 -->  
+    <property name="warFileName" value="Demo.war"></property>  
+    
+	<!--自定义时间格式-->
+	<tstamp prefix="myDate">
+	        <format property="day" pattern="yyyy-MM-dd"/>
+	        <format property="time" pattern="HH:mm:ss"/>
+	        <format property="date" pattern="yyyy-MM-dd_HH:mm:ss"/>
+	        <format property="dt" pattern="yyyyMMdd_ss"/>
+    </tstamp>
+	
+    <!-- 定义路径，编译java文件时用到的jar包 -->  
+    <path id="project.lib">  
+        <fileset dir="${basedir}/WebContent/WEB-INF/lib">  
+            <include name="**/*.jar"/>  
+        </fileset>  
+    </path>  
+      
+    <!-- 定义任务，清空任务：清空原有的class文件，创建新的build路径 -->  
+    <target name="clean">  
+        <delete dir="${basedir}/bin" />  
+        <mkdir dir="${basedir}/bin" />  
+    </target>  
+      
+    <!-- 定义任务，编译src文件夹中的java文件，编译后的class文件放到创建的文件夹下 -->  
+    <target name="compile" depends="clean">  
+        <javac srcdir="${basedir}/src" destdir="${basedir}/bin" includeantruntime="false">  
+            <classpath refid="project.lib">  
+            </classpath>  
+        </javac>  
+    </target>  
+    
+	<!-- 开始任务 -->
+	 <target name="build-war" depends="build">
+	 	<delete dir="${basedir}/bin" />
+	 </target>
+	
+    <!-- 定义默认任务，将class文件集合成war包 -->  
+    <target name="build" depends="compile">  
+        <!--将原来war包重命名Demo_date.war -->  
+    	<rename src="${basedir}/build/Demo.war" dest="${basedir}/build/Demo_${myDate.dt}.war"/>
+    	
+        <!-- 建立新war包 -->  
+        <war destfile="${basedir}/build/${warFileName}" webxml="${basedir}/WebContent/WEB-INF/web.xml">  
+            <!-- 将非jar和非class文件拷贝到war包的对应路径下 -->  
+            <fileset dir="${basedir}/WebContent">  
+                <include name="**/**.*" />  
+                <exclude name="**/*.jar"/>  
+                <exclude name="**/*.class"/>  
+            </fileset>  
+            <!-- 将jar和class文件拷贝到war包的对应路径下 -->  
+            <lib dir="${basedir}/WebContent/WEB-INF/lib" />  
+            <classes dir="${basedir}/bin" />  
+        </war>  
+    </target>  
+      
+</project> 

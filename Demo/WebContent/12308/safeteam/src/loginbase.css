@@ -1,0 +1,77 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{margin: 0;padding: 0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,"Microsoft Yahei","\5b8b\4f53",sans-serif;}
+a{color:#555;text-decoration:none;outline:none;}a:hover{color:#f60;}
+.c333{color:#333;}
+.c666{color:#666;}
+.c999{color:#999;}
+.pr_15{ padding-right:15px;}.pl_15{ padding-left:15px;}
+.clear{height:0;overflow:hidden;clear:both;}.f14{ font-size:14px;}
+.left{float:left;}.right{float:right;}.padtop15{padding-top:15px;}.padbot15{padding-bottom:15px;}
+ol, ul, li {list-style: none;}
+TextInput:focus{border:1px solid #96D1FF;box-shadow:0 0 2px rgba(109,209,255,.5);transition:border 0.1s linear 0s,box-shadow 0.1s linear 0s;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+* html .clearfix{zoom:1;}/* IE6 */
+*:first-child+html .clearfix{zoom:1;}/* IE7*/
+/*白色*/.color1{color:#fff;}.color1 a{color:#fff;}a.color1{color:#fff;}.color1 a:hover{color:#fff;}
+/*黑色*/.color2{color:#666;}.color2 a{color:#666;}a.color2{color:#666;}.color2 a:hover{color:#f60;}
+/*蓝色*/.color3{color:#317ee7;}.color3 a{color:#317ee7;}a.color3{color:#317ee7;}.color3 a:hover{color:#f60;}
+/*公用加载进度条*/
+.beinloading{text-align:center;background:url(img/loading.gif) no-repeat center 40px;height:50px;padding-top:12px;color:#666;}
+.header {height: 82px;width: 100%;overflow: hidden;background: #fff no-repeat  bottom center;}
+.nobg{ background:none; background-image:none;}
+.header-container {height: 100px;width: 990px;max-width: 990px;margin: 0 auto;position: relative;}
+.logo {float: left;display: block;height: 60px;width: 500px;margin-top: 10px;background: url("http://cdn-resource.12308.com/usercenter/css/newReg/img/logo.jpg") no-repeat 0 13px;}
+.logo a {float: left;display: inline-block;height:50px;width: 230px;overflow: hidden;text-indent: -999em;}
+.logo .header-title {float: left;height: 23px;margin-top: 30px;line-height: 23px;font-size: 20px;color: #999;}
+.navigation {float: right;height: 23px;margin-top:42px;line-height: 23px;}
+.navigation a{ padding:0 5px;}
+.content, #footer {margin-left: auto;margin-right: auto;}
+.content-container {padding-top:30px;}
+.content-container.con_p_0{padding-top: 0px;}
+.footer {clear: both;color: #666;text-align: center;padding: 20px 0 20px 0;}
+.footer-container {width: 990px;margin: 0 auto;overflow: hidden;padding-top:10px;border-top: 1px solid #D8D8D8;}
+.footer-container .copyrights{line-height:30px;}
+.footer-container .copyrights a{ padding:0 10px;}
+
+.reg_body{ background:#e5f0f9;}
+.reg_body .r_logo {float: left;display: block;height: 60px;width: 500px;margin-top: 10px;background: url("img/r_logo.png") no-repeat 0 13px;}
+.reg_body .r_logo a {float: left;display: inline-block;height:50px;width: 230px;overflow: hidden;text-indent: -999em;}
+.reg_body .header{font-family:"宋体";}
+.reg_body .content-container{background:#fff;width: 980px; margin:0 auto; overflow:hidden; padding:0;}
+.reg_body .content-header{ padding:35px;}
+.reg_body .content-header h2{ color:#323230; font-size:26px; font-weight:normal;}
+.reg_body .content-header p{color:#2f2e2a;font-size:14px;}
+.reg_body .content-header a{color:#0062c9;}
+.reg_body .footer {padding: 10px 0 10px 0;}
+.reg_body .footer-container {border-top: 0;}
+
+/*登录框底部*/
+.reg-form .lo_p{ margin-top:5px;color: #666;font-size: 12px;line-height: 14px;height: 14px; vertical-align:middle; padding-left:2px;}
+.reg-form .lo_p .lo_check {float:left;height: 14px;margin-top:0px;margin-right:3px;}
+.reg-form .lo_p span{ float: left;}
+.reg-form .lo_p b{ color:#0081cc; font-weight:normal;}
+
+
+
+.reg_body .content_reg_bg{ height:580px;background:#fff url(img/reg_bg.png) no-repeat; background-position:430px 50px;}
+/*结果*/
+.verifyst_b{padding:140px 95px;color:#333;width:400px;font:14px/25px "宋体"; }
+.verifyst_div{padding:0px; text-align:center; }
+.verifyst_div i{width:60px;height:60px;display:inline-block;background:url(img/ico_r.png) no-repeat -27px -200px; margin:0 auto;}
+.verifyst_div .plr10{ padding:0 10px;}
+.verifyst_div h2{font:16px/40px "microsoft yahei";font-size:24px; font-weight:normal; padding-bottom:10px;}
+.verifyst_div h3{font-size:18px; font-weight:normal; line-height:46px;  color:#333;}
+.verifyst_div .left{ text-align:left;width:400px;}
+.verifyst_div p{vertical-align:middle;}
+.verifyst_div .yellow{ color:#f76120}
+.verifyst_div a,.verifyst_div span{color:#0081cc;}
+.verifyst_div a:hover{color:#f60;}
+
+.verifyst_div b{ color:#e4393c;padding:0 10px; font-weight: bold;}
+.verifyst_div .time{ color:#e4393c;font-size:22px; padding:0 10px;}
+.verifyst_ok i{ background-position:-27px -200px;}
+.verifyst_fail i{ background-position:-27px -0px;}
+.verifyst_ok h2{color:#329219;}
+.verifyst_fail h2{color:#e4393c;}
+.verifyst_fail,.verifyst_fail b,.verifyst_fail .time{color:#999;}
+
