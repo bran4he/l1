@@ -24,6 +24,8 @@ import com.example.test.PostTest;
 public class SMSServlet extends HttpServlet {
 	private static final long serialVersionUID = 4638175772059075013L;
 	
+	private static Logger logger = Logger.getLogger(SMSServlet.class);
+	
 	private String result ="";
 	
 	@Override
@@ -42,21 +44,27 @@ public class SMSServlet extends HttpServlet {
 			
 			switch (n) {
 			case 1:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send1(phone);
 				break;
 			case 2:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send2(phone);
 				break;
 			case 3:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send3(phone);
 				break;
 			case 4:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send4(phone);
 				break;
 			case 5:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send5(phone);
 				break;
 			case 6:
+				logger.debug("开始发送第"+i+"条");
 				PostTest.send6(phone);
 				break;
 			default:
